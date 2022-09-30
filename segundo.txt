@@ -1,0 +1,40 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, primero = 0 , segundo = 1 , siguiente;
+
+            Console.WriteLine("Digite un codigo ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i <= n; i++)
+            {
+                if (i <= 1)
+                {
+                    siguiente = i;
+                }
+                else
+                {
+                    siguiente = primero + segundo;
+                    primero = segundo;
+                    segundo = siguiente;
+                }
+
+                if (n == i) 
+                {
+                    Console.WriteLine("Corresponde a una serie fibonacci");
+                }
+                else
+                {
+                    Console.WriteLine("No corresponde a una serie fibonacci");
+                }
+                
+            }
+        }
+        //Console.ReadKey();                   
+    }
+}
